@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hyunah Ahn | Repertoire</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: "Pretendard", "Noto Sans KR", "Helvetica Neue", Arial, sans-serif;
+      --accent: #ff8a5c;
+      --accent-dark: #e86c40;
+      --surface: rgba(255, 255, 255, 0.8);
+      --bg: #070b14;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #1d2752, #070b14 60%);
+      color: #fffdf7;
+      min-height: 100vh;
+    }
+
+    .hero {
+      padding: clamp(2rem, 8vw, 5rem) clamp(1.5rem, 6vw, 6rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      background: linear-gradient(135deg, rgba(25, 27, 53, 0.95), rgba(8, 9, 18, 0.9));
+      box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .hero .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      margin: 0;
+      letter-spacing: 0.04em;
+    }
+
+    .hero p {
+      max-width: 680px;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .hero .cta {
+      align-self: flex-start;
+      background: var(--accent);
+      border: none;
+      border-radius: 999px;
+      padding: 0.9rem 1.8rem;
+      font-size: 1rem;
+      color: #1b0c05;
+      cursor: pointer;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .hero .cta:hover,
+    .hero .cta:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+      outline: none;
+    }
+
+    main {
+      padding: clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .panel {
+      background: var(--surface);
+      color: #0c1022;
+      border-radius: 24px;
+      padding: clamp(1.25rem, 3vw, 2rem);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(16px);
+    }
+
+    .filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      align-items: end;
+    }
+
+    label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: #4b4f6f;
+      margin-bottom: 0.25rem;
+      display: inline-block;
+    }
+
+    select,
+    input[type="search"] {
+      width: 100%;
+      border-radius: 999px;
+      border: 1px solid rgba(12, 16, 34, 0.1);
+      padding: 0.6rem 0.9rem;
+      font-size: 1rem;
+      font-family: inherit;
+      background: rgba(255, 255, 255, 0.9);
+      color: inherit;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #fffdf7;
+      border-radius: 18px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+      color: #111325;
+      border: 1px solid rgba(7, 11, 20, 0.08);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .card h3 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+
+    .card small {
+      color: #5c6082;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+    }
+
+    .badge-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(14, 18, 41, 0.08);
+      font-size: 0.78rem;
+    }
+
+    .card a {
+      margin-top: auto;
+      font-weight: 600;
+      color: var(--accent-dark);
+      text-decoration: none;
+    }
+
+    .status {
+      font-size: 0.95rem;
+      color: #4b4f6f;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .panel {
+        background: rgba(10, 13, 26, 0.8);
+        color: #f6f4f0;
+      }
+
+      select,
+      input[type="search"] {
+        background: rgba(13, 17, 31, 0.85);
+        color: #f6f4f0;
+        border-color: rgba(255, 255, 255, 0.08);
+      }
+
+      .card {
+        background: rgba(0, 0, 0, 0.5);
+        color: #f6f4f0;
+        border-color: rgba(255, 255, 255, 0.1);
+      }
+
+      .badge {
+        background: rgba(255, 255, 255, 0.08);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">Hyunah Ahn</p>
+    <h1>무대 위에서 살아 숨 쉬는 레퍼토리</h1>
+    <p>
+      오페라 아리아부터 가곡, 뮤지컬 넘버까지 자주 공연하는 레퍼토리를 한 눈에 모았습니다.
+      음역과 언어로 필터링하면서 다음 공연을 위한 곡을 빠르게 찾아보세요.
+    </p>
+    <a class="cta" href="#repertoire" aria-label="레퍼토리 목록으로 바로가기">레퍼토리 보기</a>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="filters">
+        <div>
+          <label for="voiceFilter">음역</label>
+          <select id="voiceFilter">
+            <option value="all">전체</option>
+          </select>
+        </div>
+        <div>
+          <label for="languageFilter">언어</label>
+          <select id="languageFilter">
+            <option value="all">전체</option>
+          </select>
+        </div>
+        <div>
+          <label for="searchInput">제목 또는 작곡가 검색</label>
+          <input type="search" id="searchInput" placeholder="곡 제목, 작곡가, 공연 노트" />
+        </div>
+      </div>
+      <p class="status" id="status" role="status" aria-live="polite">레퍼토리를 불러오는 중…</p>
+    </section>
+
+    <section id="repertoire" class="cards" aria-live="polite" aria-busy="true"></section>
+  </main>
+
+  <template id="cardTemplate">
+    <article class="card">
+      <small class="category"></small>
+      <h3></h3>
+      <p class="composer"></p>
+      <div class="badge-group"></div>
+      <p class="notes"></p>
+      <a class="link" target="_blank" rel="noopener">악보/자료</a>
+    </article>
+  </template>
+
+  <script>
+    const voiceFilter = document.getElementById('voiceFilter');
+    const languageFilter = document.getElementById('languageFilter');
+    const searchInput = document.getElementById('searchInput');
+    const statusEl = document.getElementById('status');
+    const repertoireContainer = document.getElementById('repertoire');
+    const template = document.getElementById('cardTemplate');
+
+    let repertoire = [];
+
+    async function loadRepertoire() {
+      try {
+        const response = await fetch('repertoire.json');
+        if (!response.ok) throw new Error('레퍼토리를 불러오지 못했습니다.');
+        repertoire = await response.json();
+        populateFilters();
+        renderCards(repertoire);
+        statusEl.textContent = `${repertoire.length}곡의 레퍼토리를 불러왔습니다.`;
+        repertoireContainer.setAttribute('aria-busy', 'false');
+      } catch (error) {
+        console.error(error);
+        statusEl.textContent = '레퍼토리를 불러오는 중 오류가 발생했습니다. repertoire.json 파일을 확인하세요.';
+        repertoireContainer.setAttribute('aria-busy', 'false');
+      }
+    }
+
+    function populateFilters() {
+      const voices = Array.from(new Set(repertoire.map(item => item.voiceType))).sort();
+      const languages = Array.from(new Set(repertoire.map(item => item.language))).sort();
+
+      voices.forEach(voice => {
+        const option = document.createElement('option');
+        option.value = voice;
+        option.textContent = voice;
+        voiceFilter.append(option);
+      });
+
+      languages.forEach(language => {
+        const option = document.createElement('option');
+        option.value = language;
+        option.textContent = language;
+        languageFilter.append(option);
+      });
+    }
+
+    function renderCards(list) {
+      repertoireContainer.innerHTML = '';
+      if (!list.length) {
+        repertoireContainer.innerHTML = '<p>조건에 맞는 레퍼토리가 없습니다.</p>';
+        return;
+      }
+
+      list.forEach(item => {
+        const card = template.content.cloneNode(true);
+        card.querySelector('.category').textContent = item.category;
+        card.querySelector('h3').textContent = item.title;
+        card.querySelector('.composer').textContent = `${item.composer} · ${item.era}`;
+        const badges = card.querySelector('.badge-group');
+        badges.append(createBadge(item.voiceType));
+        badges.append(createBadge(item.language));
+        if (item.duration) badges.append(createBadge(item.duration));
+        card.querySelector('.notes').textContent = item.notes;
+        const linkEl = card.querySelector('.link');
+        if (item.link) {
+          linkEl.href = item.link;
+          linkEl.textContent = '자료 보기';
+        } else {
+          linkEl.remove();
+        }
+        repertoireContainer.append(card);
+      });
+    }
+
+    function createBadge(text) {
+      const span = document.createElement('span');
+      span.className = 'badge';
+      span.textContent = text;
+      return span;
+    }
+
+    function applyFilters() {
+      const voice = voiceFilter.value;
+      const language = languageFilter.value;
+      const keyword = searchInput.value.trim().toLowerCase();
+
+      const filtered = repertoire.filter(item => {
+        const matchVoice = voice === 'all' || item.voiceType === voice;
+        const matchLanguage = language === 'all' || item.language === language;
+        const text = `${item.title} ${item.composer} ${item.notes}`.toLowerCase();
+        const matchSearch = !keyword || text.includes(keyword);
+        return matchVoice && matchLanguage && matchSearch;
+      });
+
+      statusEl.textContent = `${filtered.length} / ${repertoire.length}곡이 조건과 일치합니다.`;
+      renderCards(filtered);
+    }
+
+    voiceFilter.addEventListener('change', applyFilters);
+    languageFilter.addEventListener('change', applyFilters);
+    searchInput.addEventListener('input', applyFilters);
+
+    loadRepertoire();
+  </script>
+</body>
+</html>
