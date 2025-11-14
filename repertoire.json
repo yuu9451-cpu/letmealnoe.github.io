@@ -1,0 +1,68 @@
+[
+  {
+    "category": "Opera Aria",
+    "title": "O mio babbino caro",
+    "composer": "Giacomo Puccini",
+    "voiceType": "Lyric Soprano",
+    "language": "Italian",
+    "era": "20세기 초",
+    "duration": "3분",
+    "notes": "감정선이 부드럽고 선율이 짧아 리사이틀 오프닝 곡으로 자주 사용.",
+    "link": "https://imslp.org/wiki/O_mio_babbino_caro_(Puccini,_Giacomo)"
+  },
+  {
+    "category": "Opera Aria",
+    "title": "Song to the Moon",
+    "composer": "Antonín Dvořák",
+    "voiceType": "Lyric Soprano",
+    "language": "Czech",
+    "era": "19세기 후반",
+    "duration": "6분",
+    "notes": "풍부한 레가토와 긴 호흡이 필요한 곡으로, 드라마틱한 무드 연출에 적합.",
+    "link": "https://imslp.org/wiki/Rusalky_solo_%27Měsíčku_na_nebi_hlubokém%27_(Dvořák,_Antonín)"
+  },
+  {
+    "category": "Art Song",
+    "title": "Widmung",
+    "composer": "Robert Schumann",
+    "voiceType": "Lyric Soprano",
+    "language": "German",
+    "era": "낭만주의",
+    "duration": "3분",
+    "notes": "슈만의 헌정으로 감정의 폭이 넓어 피아노와의 호흡이 돋보임.",
+    "link": "https://imslp.org/wiki/Widmung,_Op.25_No.1_(Schumann,_Robert)"
+  },
+  {
+    "category": "Korean Art Song",
+    "title": "그리운 금강산",
+    "composer": "한상억 / 최영섭",
+    "voiceType": "Lyric Soprano",
+    "language": "Korean",
+    "era": "현대",
+    "duration": "4분",
+    "notes": "한국어 레퍼토리로서 애절한 선율과 서정적인 가사가 특징.",
+    "link": "https://www.youtube.com/watch?v=5uJ7XbQABmA"
+  },
+  {
+    "category": "Musical Theatre",
+    "title": "Think of Me",
+    "composer": "Andrew Lloyd Webber",
+    "voiceType": "Coloratura Soprano",
+    "language": "English",
+    "era": "현대",
+    "duration": "4분",
+    "notes": "화려한 카덴차와 벨팅을 모두 보여줄 수 있는 대표 뮤지컬 넘버.",
+    "link": "https://www.sheetmusicdirect.com/en-US/se/ID_No/1000017777/Product.aspx"
+  },
+  {
+    "category": "Sacred",
+    "title": "Laudate Dominum",
+    "composer": "W. A. Mozart",
+    "voiceType": "Lyric Soprano",
+    "language": "Latin",
+    "era": "고전주의",
+    "duration": "5분",
+    "notes": "교회음악 프로그램에서 자주 선택하는 곡으로, 긴 호흡과 투명한 음색이 필요.",
+    "link": "https://imslp.org/wiki/Laudate_Dominum,_K.339/5_(Mozart,_Wolfgang_Amadeus)"
+  }
+]
