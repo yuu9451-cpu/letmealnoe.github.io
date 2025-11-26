@@ -1,0 +1,6 @@
+---
+title: "About"
+format: html
+---
+
+An awesome English major from South Korea!
