@@ -1,8 +1,0 @@
----
-title: "Home"
-format: html
----
-
-## This is my first Home Page!
-
-![](images/g5cjmxbc02pz.png)
