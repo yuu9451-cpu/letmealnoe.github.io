@@ -4,14 +4,14 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Hi,\nI don’t want to live on words that are just up in the air — I want action to come first. How will the day flow for me today?"
+    "text": "☀️\n\n\n\nHI, I’M SEOYUN\n\n\nA morning-sunlight kind of person\n\n\nI don’t want to live on words that float in the air —  \nI want &lt;b&gt;action&lt;/b&gt; to touch the ground first.\n\n\n&lt;div class=\"about-pill\"&gt;📚 학생 &amp; 강사&lt;/div&gt;\n&lt;div class=\"about-pill\"&gt;✍ 글과 언어를 사랑하는 사람&lt;/div&gt;\n&lt;div class=\"about-pill\"&gt;🧠 깊게 파고드는 타입&lt;/div&gt;\n&lt;div class=\"about-pill\"&gt;🌅 “하루를 잘 시작하고 싶은 사람”&lt;/div&gt;\n\n\n\n::: section-title\nWHO I AM\n:::\n\n::: about-grid\n\n\n&lt;span class=\"about-card-emoji\"&gt;🧑‍🏫&lt;/span&gt;\n&lt;span&gt;Teacher mode&lt;/span&gt;\n\n\nI love breaking down hard things into clear, simple steps.  \nMy favorite moment is when a student says, “아, 이제 진짜 이해됐어요.”\n\n\n\n\n&lt;span class=\"about-card-emoji\"&gt;📖&lt;/span&gt;\n&lt;span&gt;Learner mode&lt;/span&gt;\n\n\nI don’t mind going slow, as long as I’m going deep.  \nR, Quarto, linguistics, English, writing — all of them are part of my long game.\n\n\n\n\n&lt;span class=\"about-card-emoji\"&gt;✨&lt;/span&gt;\n&lt;span&gt;Writer mode&lt;/span&gt;\n\n\nI write to organize my mind, to remember tiny feelings,  \nand to leave a soft trace of myself in other people’s days.\n\n\n:::\n\nWHAT I CARE ABOUT\n\n\n\n\n&lt;span class=\"about-card-emoji\"&gt;⚡&lt;/span&gt;\n&lt;span&gt;Action over aesthetics&lt;/span&gt;\n\n\nPretty plans are nice, but I care more about what actually gets done today.  \nEven one small line of code or one clean sentence is progress.\n\n\n\n\n&lt;span class=\"about-card-emoji\"&gt;🌱&lt;/span&gt;\n&lt;span&gt;Slow, bright growth&lt;/span&gt;\n\n\nI like growth that feels honest: a little slower, a lot deeper,  \nand always aligned with who I really am.\n\n\n\n\n&lt;span class=\"about-card-emoji\"&gt;🤍&lt;/span&gt;\n&lt;span&gt;Gentle but sharp&lt;/span&gt;\n\n\nMy ideal vibe: 마음은 따뜻하게, 생각은 날카롭게.  \nI want the people around me to feel both safe and challenged in a good way.\n\n\n\n\n\nTODAY’S QUESTION\n\n\nHow will the day flow for me today —\nand what is one small action that will make future Seoyun quietly proud?\n\n\n\n☀️ If you’re reading this, I hope your day feels a little more like warm sunlight than cold fluorescent light."
   },
   {
     "objectID": "lm.html",
     "href": "lm.html",
-    "title": "Language Models",
+    "title": "Jane Austen 스타일 분석",
     "section": "",
-    "text": "LANGUAGE MODELS\nThis fall, I studied language models — and a little bit of life, too.\n\n\nA Gentle Beginning\n\n\nThis semester, I stepped into the world of language models. It started with simple curiosities:\n“How do machines predict the next word?”\nand later became something deeper —\na lesson about how we humans predict our own lives, habits, and futures.\n\n\nN-gram Models\n\n\nI learned how N-grams count patterns in text:\nhow sequences repeat, how probability shapes choices,\nand how structure appears out of pure frequency.\n And somewhere in that,\nI realized life works the same way —\nwe become what we repeat.\n\n\n\n\nStudying Texts\n\n\nI analyzed language patterns in the works of  \na British female novelist — structures, vocabulary, and narrative flow.  \nPatterns weren’t just in the text: they were in how I learn, too.\n\n View Austen Analysis → \n\n\n\nLearning About Myself\n\n\nLanguage models taught me more than formulas.  \nThey taught me that models predict based on what came before —  \nand so do people.  \n&lt;br&gt;&lt;br&gt;\n&lt;b&gt;Change the pattern, change the future.&lt;/b&gt;  \nThat's what I learned this fall."
+    "text": "Jane Austen의 글은 N-gram 모델로 분석하면서, 우리는 언어가 반복의 규칙을 따른다는 것을 배웠다. 특히 “I must confess”, “It is certain” 같은 표현이 자주 등장했는데, 이는 감정의 명료한 표현이나 자기 주장을 나타낼 때 쓰이는 고유한 스타일이다."
   },
   {
     "objectID": "lm.html#section",
@@ -201,5 +201,68 @@
     "title": "daily thinking",
     "section": "10",
     "text": "10\n“The future depends on what you do today.” — Gandhi\n의미: 오늘의 행동이 미래를 결정\n이유: 매일의 공부·기록·창작 루틴을 중요시하는 당신의 생활 방식에 맞음."
+  },
+  {
+    "objectID": "lm.html#footnotes",
+    "href": "lm.html#footnotes",
+    "title": "Seoyun's World // Action",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n0-9↩︎"
+  },
+  {
+    "objectID": "im_new.html",
+    "href": "im_new.html",
+    "title": "Seoyun's World // Action",
+    "section": "",
+    "text": "# Tokenize into Bigrams austen_bi &lt;- austen_clean %&gt;% unnest_tokens(output = “bigram”, input = text, token = “ngrams”, n = 2)"
+  },
+  {
+    "objectID": "im_new.html#footnotes",
+    "href": "im_new.html#footnotes",
+    "title": "Seoyun's World // Action",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\n0-9↩︎"
+  },
+  {
+    "objectID": "lm.html#n-gram-모델을-통해-배운-점",
+    "href": "lm.html#n-gram-모델을-통해-배운-점",
+    "title": "Jane Austen 스타일 분석",
+    "section": "",
+    "text": "Jane Austen의 글은 N-gram 모델로 분석하면서, 우리는 언어가 반복의 규칙을 따른다는 것을 배웠다. 특히 “I must confess”, “It is certain” 같은 표현이 자주 등장했는데, 이는 감정의 명료한 표현이나 자기 주장을 나타낼 때 쓰이는 고유한 스타일이다."
+  },
+  {
+    "objectID": "lm.html#데이터-전처리-austen-문장의-구조화",
+    "href": "lm.html#데이터-전처리-austen-문장의-구조화",
+    "title": "Jane Austen 스타일 분석",
+    "section": "데이터 전처리: Austen 문장의 구조화",
+    "text": "데이터 전처리: Austen 문장의 구조화\n\nausten &lt;- austen_books() %&gt;%\n  group_by(book) %&gt;%\n  mutate(chapter = cumsum(str_detect(text, regex(\"^chapter [\\\\divxlc]\", ignore_case = TRUE)))) %&gt;%\n  ungroup() %&gt;%\n  filter(!str_detect(text, \"^\\\\s*$\")) %&gt;%\n  filter(chapter != 0) %&gt;%\n  filter(!str_detect(text, \"^((?i)CHAPTER\\\\s+[0-9IVXLCDM]+)$\")) %&gt;%\n  mutate(text = gsub(\"[[:punct:]]\", \"\", text))"
+  },
+  {
+    "objectID": "lm.html#오스틴-문체의-패턴적-특징",
+    "href": "lm.html#오스틴-문체의-패턴적-특징",
+    "title": "Jane Austen 스타일 분석",
+    "section": "오스틴 문체의 패턴적 특징",
+    "text": "오스틴 문체의 패턴적 특징\nAusten 문장에서 발견된 특징은 다음과 같다:\n\n감정적 어휘의 반복: I must confess, I assure you, with all my heart\n논리적 연결어 선호: therefore, however, nevertheless\n자기 서술 표현 빈도: I must, It is\n\n\nausten_uni &lt;- austen %&gt;%\n  unnest_tokens(output = \"unigram\", input = text, token = \"words\")\n\nausten_bi &lt;- austen %&gt;%\n  unnest_tokens(output = \"bigram\", input = text, token = \"ngrams\", n = 2)\n\nbi_count &lt;- austen_bi %&gt;%\n  count(bigram, name = \"bigram_count\", sort = TRUE) %&gt;%\n  separate(bigram, c(\"w1\", \"w2\"), sep = \" \") %&gt;%\n  filter(if_any(c(w1, w2), ~ !is.na(.))) %&gt;%\n  filter(if_all(c(w1, w2), ~ !str_detect(., \"^[0-9]\")))\n\nbi_probs &lt;- bi_count %&gt;%\n  group_by(w1) %&gt;%\n  mutate(\n    total_after_w1 = sum(bigram_count),\n    probability = bigram_count / total_after_w1\n  ) %&gt;%\n  ungroup() %&gt;%\n  arrange(desc(probability))"
+  },
+  {
+    "objectID": "lm.html#n-gram-기반-문장-생성-예시",
+    "href": "lm.html#n-gram-기반-문장-생성-예시",
+    "title": "Jane Austen 스타일 분석",
+    "section": "N-gram 기반 문장 생성 예시",
+    "text": "N-gram 기반 문장 생성 예시\n\ngenerate_sentence &lt;- function(bigram_probs, start_word = \"still\", max_len = 15) {\n  sentence &lt;- c(start_word)\n  current_word &lt;- start_word\n\n  for (i in 1:max_len) {\n    candidates &lt;- bigram_probs[bigram_probs$w1 == current_word, ]\n    if (nrow(candidates) == 0) break\n    next_word &lt;- sample(candidates$w2, size = 1, prob = candidates$probability)\n    sentence &lt;- c(sentence, next_word)\n    current_word &lt;- next_word\n  }\n  paste(sentence, collapse = \" \")\n}\n\nset.seed(4567)\ngenerate_sentence(bi_probs, start_word = \"still\", max_len = 15)\n\n[1] \"still it ought to go i shall only as second glance was not as to join\""
+  },
+  {
+    "objectID": "lm.html#trigram을-통한-더-정교한-생성",
+    "href": "lm.html#trigram을-통한-더-정교한-생성",
+    "title": "Jane Austen 스타일 분석",
+    "section": "Trigram을 통한 더 정교한 생성",
+    "text": "Trigram을 통한 더 정교한 생성\n\njoined &lt;- paste(austen$text, collapse = \" \")\nausten_tri &lt;- ngram(joined, 3)\n\nset.seed(123)\nbabble(austen_tri, 20)\n\n[1] \"he replied I think her present home Elinors happiness was not so mean as to the event of that affection \""
+  },
+  {
+    "objectID": "lm.html#인사이트-요약",
+    "href": "lm.html#인사이트-요약",
+    "title": "Jane Austen 스타일 분석",
+    "section": "인사이트 요약",
+    "text": "인사이트 요약\n\nJane Austen의 문체는 감성적 균형과 논리적 흐름을 모두 충족하는 특징이 있음\nN-gram 모델을 활용하면 이러한 패턴을 수치화하고 문장 생성에도 응용 가능\n반복된 문장 구조는 단순한 문체가 아니라, 작가의 사고 구조와 가치관을 반영함"
   }
 ]

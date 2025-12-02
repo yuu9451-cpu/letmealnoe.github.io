@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="정서윤 鄭㥠橍">
 
-<title>Language Models – Seoyun’s World // Action</title>
+<title>Jane Austen 스타일 분석 – Seoyun’s World // Action</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -330,7 +366,7 @@ h1.title {
 <span class="menu-text"><i class="fa-solid fa-house-chimney"></i> Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./daily_thinking.qmd"> 
+    <a class="nav-link" href="./dailythinking.html"> 
 <span class="menu-text"><i class="fa-solid fa-brain"></i> Daily Thoughts</span></a>
   </li>  
   <li class="nav-item">
@@ -365,13 +401,19 @@ h1.title {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Language Models</h1>
+<h1 class="title">Jane Austen 스타일 분석</h1>
 </div>
 
 
 
 <div class="quarto-title-meta column-page">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>정서윤 鄭㥠橍 </p>
+          </div>
+  </div>
     
   
     
@@ -382,178 +424,102 @@ h1.title {
 </header>
 
 
-<style>
-body {
-  background:
-    radial-gradient(circle at 0% 0%, rgba(125,211,252,0.55) 0, transparent 55%),
-    radial-gradient(circle at 100% 100%, rgba(244,114,182,0.55) 0, transparent 55%),
-    #060a12;
-  background-attachment: fixed;
-  color: #ecf0f6;
-  font-family: Pretendard, system-ui;
-}
-
-/* wrapper */
-.lm-wrapper {
-  max-width: 900px;
-  margin: 70px auto 100px;
-  padding: 0 20px;
-}
-
-/* title */
-.lm-title {
-  font-family: "Share Tech Mono", monospace;
-  font-size: 2.8rem;
-  text-align: center;
-  color: #7dd3fc;
-  text-shadow: 0 0 14px rgba(125,211,252,0.9);
-  letter-spacing: 0.08em;
-  margin-bottom: 10px;
-}
-
-.lm-sub {
-  text-align: center;
-  opacity: 0.82;
-  margin-bottom: 40px;
-}
-
-/* highlight card */
-.highlight-card {
-  background: rgba(15,23,42,0.78);
-  border: 1px solid rgba(148,163,184,0.3);
-  border-radius: 20px;
-  padding: 26px 24px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-  backdrop-filter: blur(12px);
-  margin-bottom: 26px;
-}
-
-.highlight-title {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-  color: #a5f3fc;
-  font-family: "Share Tech Mono", monospace;
-  letter-spacing: 0.05em;
-}
-
-.highlight-body {
-  line-height: 1.6;
-  opacity: 0.9;
-  font-size: 1rem;
-}
-
-/* 2 grid */
-.lm-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 18px;
-  margin-top: 30px;
-}
-
-@media (max-width: 820px) {
-  .lm-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.lm-card {
-  background: rgba(15,23,42,0.72);
-  border-radius: 16px;
-  border: 1px solid rgba(148,163,184,0.3);
-  padding: 18px 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.55);
-  transition: 0.25s ease;
-}
-
-.lm-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.7);
-}
-
-.lm-card-title {
-  font-size: 1.1rem;
-  margin-bottom: 10px;
-  color: #a5f3fc;
-  font-family: "Share Tech Mono", monospace;
-}
-
-.lm-card-body {
-  font-size: 0.95rem;
-  opacity: 0.88;
-  line-height: 1.6;
-}
-
-/* link button */
-.lm-link {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 6px 12px;
-  border-radius: 8px;
-  background: rgba(34,211,238,0.16);
-  color: #7dd3fc;
-  border: 1px solid rgba(125,211,252,0.4);
-  backdrop-filter: blur(6px);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: 0.25s ease;
-}
-
-.lm-link:hover {
-  background: rgba(34,211,238,0.28);
-  color: #fff;
-}
-</style>
-<p>LANGUAGE MODELS</p>
-<p>This fall, I studied language models — and a little bit of life, too.</p>
-<!-- Intro highlight -->
-<div class="highlight-title">
-A Gentle Beginning
+<section id="n-gram-모델을-통해-배운-점" class="level2">
+<h2 class="anchored" data-anchor-id="n-gram-모델을-통해-배운-점">N-gram 모델을 통해 배운 점</h2>
+<p>Jane Austen의 글은 N-gram 모델로 분석하면서, 우리는 <strong>언어가 반복의 규칙을 따른다</strong>는 것을 배웠다. 특히 “I must confess”, “It is certain” 같은 표현이 자주 등장했는데, 이는 <strong>감정의 명료한 표현</strong>이나 <strong>자기 주장</strong>을 나타낼 때 쓰이는 고유한 스타일이다.</p>
+</section>
+<section id="데이터-전처리-austen-문장의-구조화" class="level2">
+<h2 class="anchored" data-anchor-id="데이터-전처리-austen-문장의-구조화">데이터 전처리: Austen 문장의 구조화</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>austen <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">chapter =</span> <span class="fu">cumsum</span>(<span class="fu">str_detect</span>(text, <span class="fu">regex</span>(<span class="st">"^chapter [</span><span class="sc">\\</span><span class="st">divxlc]"</span>, <span class="at">ignore_case =</span> <span class="cn">TRUE</span>)))) <span class="sc">%&gt;%</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(text, <span class="st">"^</span><span class="sc">\\</span><span class="st">s*$"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(chapter <span class="sc">!=</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">str_detect</span>(text, <span class="st">"^((?i)CHAPTER</span><span class="sc">\\</span><span class="st">s+[0-9IVXLCDM]+)$"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">text =</span> <span class="fu">gsub</span>(<span class="st">"[[:punct:]]"</span>, <span class="st">""</span>, text))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="highlight-body">
-<p>This semester, I stepped into the world of language models. It started with simple curiosities:<br>
-<i>“How do machines predict the next word?”</i><br>
-and later became something deeper —<br>
-<b>a lesson about how we humans predict our own lives, habits, and futures.</b></p>
+</section>
+<section id="오스틴-문체의-패턴적-특징" class="level2">
+<h2 class="anchored" data-anchor-id="오스틴-문체의-패턴적-특징">오스틴 문체의 패턴적 특징</h2>
+<p>Austen 문장에서 발견된 특징은 다음과 같다:</p>
+<ul>
+<li><strong>감정적 어휘의 반복</strong>: <code>I must confess</code>, <code>I assure you</code>, <code>with all my heart</code></li>
+<li><strong>논리적 연결어 선호</strong>: <code>therefore</code>, <code>however</code>, <code>nevertheless</code></li>
+<li><strong>자기 서술 표현 빈도</strong>: <code>I must</code>, <code>It is</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>austen_uni <span class="ot">&lt;-</span> austen <span class="sc">%&gt;%</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(<span class="at">output =</span> <span class="st">"unigram"</span>, <span class="at">input =</span> text, <span class="at">token =</span> <span class="st">"words"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>austen_bi <span class="ot">&lt;-</span> austen <span class="sc">%&gt;%</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(<span class="at">output =</span> <span class="st">"bigram"</span>, <span class="at">input =</span> text, <span class="at">token =</span> <span class="st">"ngrams"</span>, <span class="at">n =</span> <span class="dv">2</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>bi_count <span class="ot">&lt;-</span> austen_bi <span class="sc">%&gt;%</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(bigram, <span class="at">name =</span> <span class="st">"bigram_count"</span>, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">separate</span>(bigram, <span class="fu">c</span>(<span class="st">"w1"</span>, <span class="st">"w2"</span>), <span class="at">sep =</span> <span class="st">" "</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">if_any</span>(<span class="fu">c</span>(w1, w2), <span class="sc">~</span> <span class="sc">!</span><span class="fu">is.na</span>(.))) <span class="sc">%&gt;%</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">if_all</span>(<span class="fu">c</span>(w1, w2), <span class="sc">~</span> <span class="sc">!</span><span class="fu">str_detect</span>(., <span class="st">"^[0-9]"</span>)))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>bi_probs <span class="ot">&lt;-</span> bi_count <span class="sc">%&gt;%</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(w1) <span class="sc">%&gt;%</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">total_after_w1 =</span> <span class="fu">sum</span>(bigram_count),</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">probability =</span> bigram_count <span class="sc">/</span> total_after_w1</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(probability))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="highlight-title">
-N-gram Models
-</div>
-<div class="highlight-body">
-<p>I learned how N-grams count patterns in text:<br>
-how sequences repeat, how probability shapes choices,<br>
-and how structure appears out of pure frequency.<br>
-<br><br> And somewhere in that,<br>
-I realized life works the same way —<br>
-<b>we become what we repeat.</b></p>
-</div>
-<!-- Grid section -->
-<div class="lm-card">
-<div class="lm-card-title">
-Studying Texts
-</div>
-<div class="lm-card-body">
-<pre><code>I analyzed language patterns in the works of  
-a British female novelist — structures, vocabulary, and narrative flow.  
-Patterns weren’t just in the text: they were in how I learn, too.</code></pre>
-</div>
-<p><a class="lm-link" href="file:///E:/2학기/webpage/webpage/austen.html"> View Austen Analysis → </a></p>
-</div>
-<div class="lm-card">
-<div class="lm-card-title">
-Learning About Myself
-</div>
-<div class="lm-card-body">
-<pre><code>Language models taught me more than formulas.  
-They taught me that models predict based on what came before —  
-and so do people.  
-&lt;br&gt;&lt;br&gt;
-&lt;b&gt;Change the pattern, change the future.&lt;/b&gt;  
-That's what I learned this fall.</code></pre>
+</section>
+<section id="n-gram-기반-문장-생성-예시" class="level2">
+<h2 class="anchored" data-anchor-id="n-gram-기반-문장-생성-예시">N-gram 기반 문장 생성 예시</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>generate_sentence <span class="ot">&lt;-</span> <span class="cf">function</span>(bigram_probs, <span class="at">start_word =</span> <span class="st">"still"</span>, <span class="at">max_len =</span> <span class="dv">15</span>) {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  sentence <span class="ot">&lt;-</span> <span class="fu">c</span>(start_word)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  current_word <span class="ot">&lt;-</span> start_word</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>max_len) {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    candidates <span class="ot">&lt;-</span> bigram_probs[bigram_probs<span class="sc">$</span>w1 <span class="sc">==</span> current_word, ]</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="fu">nrow</span>(candidates) <span class="sc">==</span> <span class="dv">0</span>) <span class="cf">break</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    next_word <span class="ot">&lt;-</span> <span class="fu">sample</span>(candidates<span class="sc">$</span>w2, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> candidates<span class="sc">$</span>probability)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    sentence <span class="ot">&lt;-</span> <span class="fu">c</span>(sentence, next_word)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    current_word <span class="ot">&lt;-</span> next_word</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">paste</span>(sentence, <span class="at">collapse =</span> <span class="st">" "</span>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">4567</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">generate_sentence</span>(bi_probs, <span class="at">start_word =</span> <span class="st">"still"</span>, <span class="at">max_len =</span> <span class="dv">15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "still it ought to go i shall only as second glance was not as to join"</code></pre>
 </div>
 </div>
+</section>
+<section id="trigram을-통한-더-정교한-생성" class="level2">
+<h2 class="anchored" data-anchor-id="trigram을-통한-더-정교한-생성">Trigram을 통한 더 정교한 생성</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>joined <span class="ot">&lt;-</span> <span class="fu">paste</span>(austen<span class="sc">$</span>text, <span class="at">collapse =</span> <span class="st">" "</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>austen_tri <span class="ot">&lt;-</span> <span class="fu">ngram</span>(joined, <span class="dv">3</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">babble</span>(austen_tri, <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "he replied I think her present home Elinors happiness was not so mean as to the event of that affection "</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="인사이트-요약" class="level2">
+<h2 class="anchored" data-anchor-id="인사이트-요약">인사이트 요약</h2>
+<ul>
+<li>Jane Austen의 문체는 <strong>감성적 균형과 논리적 흐름</strong>을 모두 충족하는 특징이 있음</li>
+<li><strong>N-gram 모델</strong>을 활용하면 이러한 패턴을 수치화하고 문장 생성에도 응용 가능</li>
+<li>반복된 문장 구조는 단순한 문체가 아니라, 작가의 <strong>사고 구조와 가치관</strong>을 반영함</li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
